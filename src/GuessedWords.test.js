@@ -48,6 +48,7 @@ describe('if there are words guessed', () => {
   beforeEach(() => {
     wrapper = setup({ guessedWords })
   })
+
   test('renders without error', () => {
     const component = findByTestAttr(wrapper, 'component-guessed-words')
     expect(component.length).toBe(1)
