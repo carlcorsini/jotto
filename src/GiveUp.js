@@ -34,7 +34,12 @@ const GiveUp = props => {
         <div className="alert alert-danger" data-test="component-give-up">
           <span data-test="give-up-message">
             You
-            {diss}, the secret word was <em>{props.secretWord}</em>
+            {diss}, the secret word was{' '}
+            <b>
+              <strong>
+                <em>{props.secretWord}</em>
+              </strong>
+            </b>
           </span>
           <br />
           <button

@@ -31,7 +31,7 @@ const Congrats = props => {
       <FadeIn>
         <div className="alert alert-success" data-test="component-congrats">
           <span data-test="congrats-message">
-            Congratulations, You're {grats}
+            Congratulations! You're <strong>{grats}</strong>
           </span>
           <br />
           <button
