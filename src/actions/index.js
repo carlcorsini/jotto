@@ -30,7 +30,7 @@ export const guessWord = guessedWord => {
       payload: { guessedWord, letterMatchCount },
     })
 
-    if (guessedWord === secretWord) {
+    if (guessedWord.toLowerCase() === secretWord.toLowerCase()) {
       dispatch({ type: actionTypes.CORRECT_GUESS })
     }
   }
