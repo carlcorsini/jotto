@@ -9,13 +9,13 @@ import FadeIn from 'react-fade-in'
  * @return {[JSX.element]} Render component or 'null' if success prop is false
  */
 
-const Congrats = props => {
-  if (props.success) {
+const GiveUp = props => {
+  if (props.giveUp) {
     return (
       <FadeIn>
-        <div className="alert alert-success" data-test="component-congrats">
-          <span data-test="congrats-message">
-            Congratulations, You're an mf geniusss
+        <div className="alert alert-danger" data-test="component-give-up">
+          <span data-test="give-up-message">
+            You're weak, the secret word was <em>{props.secretWord}</em>
           </span>
           <br />
           <button
@@ -27,12 +27,12 @@ const Congrats = props => {
       </FadeIn>
     )
   } else {
-    return <div data-test="component-congrats" />
+    return <div data-test="component-give-up" />
   }
 }
 
-Congrats.propTypes = {
-  success: PropTypes.bool.isRequired,
+GiveUp.propTypes = {
+  giveUp: PropTypes.bool.isRequired,
 }
 
-export default Congrats
+export default GiveUp

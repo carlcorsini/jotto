@@ -4,7 +4,7 @@ import { findByTestAttr, checkProps } from '../test/testUtils'
 import GuessedWords from './GuessedWords'
 
 const defaultProps = {
-  guessedWords: [{ guessedWord: 'train', letterMatchCount: 3 }]
+  guessedWords: [{ guessedWord: 'train', letterMatchCount: 3 }],
 }
 
 /**
@@ -31,10 +31,6 @@ describe('if there are no words guessed', () => {
     const component = findByTestAttr(wrapper, 'component-guessed-words')
     expect(component.length).toBe(1)
   })
-  test('renders instructions to guess a word', () => {
-    const instructions = findByTestAttr(wrapper, 'guess-instructions')
-    expect(instructions.text().length).not.toBe(0)
-  })
 })
 
 describe('if there are words guessed', () => {
@@ -42,7 +38,7 @@ describe('if there are words guessed', () => {
   const guessedWords = [
     { guessedWord: 'train', letterMatchCount: 3 },
     { guessedWord: 'agile', letterMatchCount: 1 },
-    { guessedWord: 'party', letterMatchCount: 5 }
+    { guessedWord: 'party', letterMatchCount: 5 },
   ]
 
   beforeEach(() => {
