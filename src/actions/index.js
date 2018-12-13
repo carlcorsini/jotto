@@ -1,6 +1,9 @@
 import axios from 'axios'
 
 import { getLetterMatchCount } from '../helpers'
+
+const api = process.env.REACT_APP_API_BASE_URL || 'http://localhost:3030'
+
 export const actionTypes = {
   CORRECT_GUESS: 'CORRECT_GUESS',
   GUESS_WORD: 'GUESS_WORD',
@@ -8,8 +11,6 @@ export const actionTypes = {
   RESET_GAME: 'RESET_GAME',
   GIVE_UP: 'GIVE_UP',
 }
-
-const api = process.env.apiURL || 'http://localhost:3030'
 
 /**
  * Returns Redux Thunk function that dispatches GUESS_WORD action
