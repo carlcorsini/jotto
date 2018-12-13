@@ -41,8 +41,7 @@ export class UnconnectedInput extends Component {
               <div className="col" />
             </div>
             <div className="row justify-content-center">
-              <div className="col" />
-              <div className="col ">
+              <div className="col">
                 <div className="btn-group">
                   <button
                     onClick={this.submitGuessedWord}
@@ -59,7 +58,6 @@ export class UnconnectedInput extends Component {
                   </button>
                 </div>
               </div>
-              <div className="col" />
             </div>
           </form>
         </FadeIn>
