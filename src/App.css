@@ -4,9 +4,3 @@ body {
   background-repeat: repeat-vertical;
   background-attachment: fixed;
 }
-
-@media (max-width: 767px) {
-  body {
-    background-attachment: initial !important;
-  }
-}
