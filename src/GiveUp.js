@@ -58,13 +58,19 @@ const GiveUp = props => {
           </span>
           <br />
           <button
+            style={{ marginTop: '1em' }}
             className="btn btn-success mb-2"
             onClick={props.getSecretWord}>
             New Game
           </button>
         </div>
         <div>
-          <img className="img-fluid" src={gif} alt="gif" />
+          <img
+            style={{ marginBottom: '1em', borderRadius: '.5em' }}
+            className="img-fluid"
+            src={gif}
+            alt="gif"
+          />
         </div>
       </FadeIn>
     )

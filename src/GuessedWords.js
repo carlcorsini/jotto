@@ -16,7 +16,13 @@ const GuessedWords = props => {
     ))
     contents = (
       <FadeIn>
-        <div data-test="guessed-words">
+        <div
+          style={{
+            backgroundColor: 'white',
+            borderRadius: '1em',
+            padding: '1em',
+          }}
+          data-test="guessed-words">
           <h3>Guessed Words</h3>
           <p>Total Guesses: {guessedWordsRows.length}</p>
           <table className="table table-sm">
