@@ -9,12 +9,12 @@ import FadeIn from 'react-fade-in'
  * @return {[JSX.element]} Render component or 'null' if success prop is false
  */
 
-const randomQuote = (array, max) => {
+const randomThing = (array, max) => {
   let random = Math.floor(Math.random() * Math.floor(max))
   return array[random]
 }
 
-const phrase = [
+const phrases = [
   "'re dumb",
   "'re not smart",
   "'re weak willed",
@@ -25,9 +25,23 @@ const phrase = [
   ' bring shame upon your family',
 ]
 
+const gifs = [
+  'https://media.giphy.com/media/l378w70Nxv0alv2qk/giphy.gif',
+  'https://media.giphy.com/media/3orif7QCyes3GEvsTS/giphy.gif',
+  'https://media.giphy.com/media/ivH4UhEAPXNAI/giphy.gif',
+  'https://media.giphy.com/media/GUhiBgU0DbWsU/giphy.gif',
+  'https://media.tenor.com/images/0329660f240b72537c65be924942e5ae/tenor.gif',
+  'https://media.giphy.com/media/KuJesxZSpHoXu/giphy.gif',
+  'https://i.gifer.com/1Gys.gif',
+  'https://media.giphy.com/media/1JyWrrkCIUQyQ/giphy.gif',
+  'https://media.giphy.com/media/wPQJeg7FCW2s/giphy.gif',
+  'https://thumbs.gfycat.com/FluidScaredKob-max-1mb.gif',
+]
+
 const GiveUp = props => {
   if (props.giveUp) {
-    let diss = randomQuote(phrase, phrase.length)
+    let diss = randomThing(phrases, phrases.length)
+    let gif = randomThing(gifs, gifs.length)
 
     return (
       <FadeIn>
@@ -48,6 +62,9 @@ const GiveUp = props => {
             onClick={props.getSecretWord}>
             New Game
           </button>
+        </div>
+        <div>
+          <img className="img-fluid" src={gif} alt="gif" />
         </div>
       </FadeIn>
     )
