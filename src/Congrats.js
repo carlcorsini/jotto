@@ -27,6 +27,7 @@ const phrases = [
   'the bees knees!',
   'the mosquitos knuckles.',
   'not just another pretty face!',
+  '6,000,000 points!',
 ]
 
 const gifs = [

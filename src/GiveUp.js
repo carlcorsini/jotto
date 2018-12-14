@@ -32,6 +32,7 @@ const phrases = [
   'Grow a brain.',
   'Read a book.',
   'You idiot!',
+  '-1,000,000 points.',
 ]
 
 const gifs = [
@@ -64,7 +65,9 @@ const GiveUp = props => {
       <FadeIn>
         <div className="alert alert-danger" data-test="component-give-up">
           <span data-test="give-up-message">
-            {diss} The secret word was{' '}
+            {diss}
+            <br />
+            <br /> The secret word was{' '}
             <b>
               <strong>
                 <em>{props.secretWord}</em>
