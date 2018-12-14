@@ -32,6 +32,7 @@ export class UnconnectedApp extends Component {
               <div className="col" />
               <div style={{ textAlign: 'center' }} className="col-8">
                 <Congrats
+                  secretWord={this.props.secretWord}
                   success={this.props.success}
                   getSecretWord={this.getSecretWord}
                 />
