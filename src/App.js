@@ -22,8 +22,13 @@ export class UnconnectedApp extends Component {
         <div className="container" style={{ marginTop: '2em' }}>
           <div className="row">
             <div className="col" />
-            <div style={{ textAlign: 'center' }} className="col">
-              <h1>Jotto</h1>
+            <div
+              style={{
+                textAlign: 'center',
+                fontFamily: 'Indie Flower',
+              }}
+              className="col">
+              <h1 style={{ fontSize: '4em' }}>Jotto</h1>
             </div>
             <div className="col" />
           </div>
