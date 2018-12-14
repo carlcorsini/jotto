@@ -9,8 +9,8 @@ import FadeIn from 'react-fade-in'
  * @return {[JSX.element]} Render component or 'null' if success prop is false
  */
 
-const randomThing = (array, max) => {
-  let random = Math.floor(Math.random() * Math.floor(max))
+const randomThing = array => {
+  let random = Math.floor(Math.random() * array.length)
   return array[random]
 }
 
@@ -40,8 +40,8 @@ const gifs = [
 
 const GiveUp = props => {
   if (props.giveUp) {
-    let diss = randomThing(phrases, phrases.length)
-    let gif = randomThing(gifs, gifs.length)
+    let diss = randomThing(phrases)
+    let gif = randomThing(gifs)
 
     return (
       <FadeIn>
