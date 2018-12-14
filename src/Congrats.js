@@ -15,19 +15,21 @@ const randomThing = array => {
 }
 
 const phrases = [
-  'a gosh darn genius!',
-  'a savant.',
-  'the smartest person in the world!',
-  'destined for greatness!',
-  'my best friend :)',
-  'pretty smart.',
-  'a bad ass mother fucker.',
-  'going places.',
-  'the best!',
-  'the bees knees!',
-  'the mosquitos knuckles.',
-  'not just another pretty face!',
-  '6,000,000 points!',
+  "You're a gosh darn genius!",
+  "You're a savant.",
+  "You're the smartest person in the world!",
+  "You're destined for greatness!",
+  "You're my best friend :)",
+  "You're pretty smart.",
+  "You're a bad ass mother fucker.",
+  "You're going places.",
+  "You're the best!",
+  "You're the bees knees!",
+  "You're the mosquitos knuckles.",
+  "You're not just another pretty face!",
+  'You get 6,000,000 points!',
+  "We're so proud of you!",
+  '10 points for Gryffindor',
 ]
 
 const gifs = [
@@ -61,7 +63,7 @@ const Congrats = props => {
       <FadeIn>
         <div className="alert alert-success" data-test="component-congrats">
           <span data-test="congrats-message">
-            Congratulations! You're <strong>{grats}</strong> <br />
+            Congratulations! <br /> <strong>{grats}</strong> <br />
             <br />
             The secret word was <strong>{props.secretWord}</strong>.
           </span>
