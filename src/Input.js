@@ -31,6 +31,7 @@ export class UnconnectedInput extends Component {
             <div className="row align-items-center">
               <div className="col" style={{ textAlign: 'center' }} />
               <input
+                autoFocus="autofocus"
                 data-test="input-box"
                 ref={this.inputBox}
                 className="mb-2 mx-sm-3 form-control"

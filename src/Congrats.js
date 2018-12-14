@@ -30,6 +30,7 @@ const phrases = [
   'You get 6,000,000 points!',
   "We're so proud of you!",
   '10 points for Gryffindor',
+  "You're the greatest wordsmith in the tri-county area.",
 ]
 
 const gifs = [
@@ -65,7 +66,7 @@ const Congrats = props => {
           <span data-test="congrats-message">
             Congratulations! <br /> <strong>{grats}</strong> <br />
             <br />
-            The secret word was <strong>{props.secretWord}</strong>.
+            The secret word was <strong>{props.secretWord}</strong>
           </span>
           <br />
           <button

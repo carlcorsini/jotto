@@ -73,7 +73,6 @@ const GiveUp = props => {
                 <em>{props.secretWord}</em>
               </strong>
             </b>
-            .
           </span>
           <br />
           <button

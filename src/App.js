@@ -27,7 +27,14 @@ export class UnconnectedApp extends Component {
           textAlign: 'center',
         }}>
         <div className="alert alert-warning">
-          <span>Jotto is down :( We are so sorry</span>
+          <span>
+            Jotto is down :(
+            <br /> We are so sorry.
+            <br />
+            <br />
+            Please wait 30 seconds tops and try again.
+            <br />
+          </span>
         </div>
       </div>
     ) : (
