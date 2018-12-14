@@ -19,9 +19,14 @@ const phrases = [
   'a savant.',
   'the smartest person in the world!',
   'destined for greatness!',
-  'insane in the membrane!',
   'my best friend :)',
   'pretty smart.',
+  'a bad ass mother fucker.',
+  'going places.',
+  'the best!',
+  'the bees knees!',
+  'the mosquitos knuckles.',
+  'not just another pretty face!',
 ]
 
 const gifs = [
@@ -34,6 +39,17 @@ const gifs = [
   'https://media.giphy.com/media/l1AsI389lnxkvQHAc/giphy.gif',
   'https://i.imgur.com/3ZJ5ZIO.gif',
   'https://i.gifer.com/L11L.gif',
+  'http://media.tumblr.com/tumblr_m3ppveMgu71r4lux2.gif',
+  'https://vignette.wikia.nocookie.net/the-secret-society/images/6/6e/Minnie-Congrats.gif/revision/latest?cb=20180418215758',
+  'https://i0.wp.com/www.eventstodayz.com/wp-content/uploads/2017/08/congrats-image-gif-2017.gif?zoom=2.625&resize=368%2C211',
+  'https://i.gifer.com/Sgnb.gif',
+  'https://i.pinimg.com/originals/b8/0c/fc/b80cfcd98f163d6ff190488f3985e7e5.gif',
+  'https://cdn.dribbble.com/users/104921/screenshots/2853932/july_shot.gif',
+  'https://66.media.tumblr.com/941a210daf967e6671760b3b1d1c1482/tumblr_p3alid1WHj1qe8lb8o1_400.gif',
+  'http://31.media.tumblr.com/88ee2a56006928ef66128912fec100f1/tumblr_n1cq2oeUeD1t77ydgo1_400.gif',
+  'http://www.reactiongifs.com/r/gj1.gif',
+  'https://media.giphy.com/media/11ezOCtJ7Eetri/giphy.gif',
+  'https://media.giphy.com/media/wAq7v641KWnjq/giphy.gif',
 ]
 
 const Congrats = props => {
@@ -45,6 +61,7 @@ const Congrats = props => {
         <div className="alert alert-success" data-test="component-congrats">
           <span data-test="congrats-message">
             Congratulations! You're <strong>{grats}</strong> <br />
+            <br />
             The secret word was <strong>{props.secretWord}</strong>.
           </span>
           <br />

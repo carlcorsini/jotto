@@ -10,6 +10,7 @@ export const actionTypes = {
   SET_SECRET_WORD: 'SET_SECRET_WORD',
   RESET_GAME: 'RESET_GAME',
   GIVE_UP: 'GIVE_UP',
+  SERVER_ERROR: 'SERVER_ERROR',
 }
 
 /**
@@ -22,7 +23,8 @@ export const actionTypes = {
 
 export const guessWord = guessedWord => {
   return function(dispatch, getState) {
-    const secretWord = getState().secretWord
+    const secretWord = getState().secretWord.word
+
     const letterMatchCount = getLetterMatchCount(guessedWord, secretWord)
 
     dispatch({
@@ -37,11 +39,20 @@ export const guessWord = guessedWord => {
 }
 
 export const getSecretWord = () => {
-  return dispatch => {
-    return axios.get(api).then(response => {
-      dispatch({ type: actionTypes.SET_SECRET_WORD, payload: response.data })
-      dispatch({ type: actionTypes.RESET_GAME, payload: false })
-    })
+  return async dispatch => {
+    return axios
+      .get(api)
+      .then(response => {
+        dispatch({ type: actionTypes.SET_SECRET_WORD, payload: response.data })
+        dispatch({ type: actionTypes.RESET_GAME, payload: false })
+      })
+      .catch(error => {
+        console.log(error)
+        dispatch({
+          type: actionTypes.SERVER_ERROR,
+          payload: 'server down',
+        })
+      })
   }
 }
 

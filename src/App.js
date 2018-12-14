@@ -17,7 +17,20 @@ export class UnconnectedApp extends Component {
     this.props.getSecretWord()
   }
   render() {
-    return (
+    return this.props.serverError ? (
+      <div
+        className="container"
+        style={{
+          marginTop: '2em',
+          maxWidth: '60%',
+          fontSize: '2em',
+          textAlign: 'center',
+        }}>
+        <div className="alert alert-warning">
+          <span>Jotto is down :( We are so sorry</span>
+        </div>
+      </div>
+    ) : (
       <FadeIn>
         <div className="container" style={{ marginTop: '2em' }}>
           <div className="row">
@@ -63,9 +76,20 @@ export class UnconnectedApp extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  const { success, guessedWords, secretWord, giveUp } = state
-  return { success, guessedWords, secretWord, giveUp }
+const mapStateToProps = ({
+  success,
+  guessedWords,
+  secretWord,
+  giveUp,
+  serverError,
+}) => {
+  return {
+    success,
+    guessedWords,
+    secretWord: secretWord.word,
+    serverError: secretWord.serverError,
+    giveUp,
+  }
 }
 
 export default connect(

@@ -15,14 +15,23 @@ const randomThing = array => {
 }
 
 const phrases = [
-  "'re dumb",
-  "'re not smart",
-  "'re weak willed",
-  "'re a quitter",
-  "'re a disappointment",
-  "'re not my friend anymore",
-  "'re not the sharpest tool in the shed",
-  ' bring shame upon your family',
+  "You're dumb.",
+  "You're not smart.",
+  "You're weak willed.",
+  "You're a quitter.",
+  "You're a disappointment.",
+  "You're not my friend anymore.",
+  "You're not the sharpest tool in the shed.",
+  'You bring shame upon your family.',
+  "You should take a step back and think about what you're doing with your life.",
+  "You should've stayed in school.",
+  'You need to go to sleep.',
+  'Take a lap.',
+  'Wow, really?',
+  "Is that all you've got?",
+  'Grow a brain.',
+  'Read a book.',
+  'You idiot!',
 ]
 
 const gifs = [
@@ -36,6 +45,14 @@ const gifs = [
   'https://media.giphy.com/media/1JyWrrkCIUQyQ/giphy.gif',
   'https://media.giphy.com/media/wPQJeg7FCW2s/giphy.gif',
   'https://thumbs.gfycat.com/FluidScaredKob-max-1mb.gif',
+  'https://media.tenor.com/images/387f1df2d3bd94e8a954bab19a7cdd0c/tenor.gif',
+  'https://media.giphy.com/media/Gk6E0UXUew9lC/giphy.gif',
+  'https://media.giphy.com/media/3ohuAsb6udbvU2Us3S/giphy.gif',
+  'https://thumbs.gfycat.com/GratefulWelloffCrocodileskink-small.gif',
+  'https://i.gifer.com/1Gz9.gif',
+  'https://media.giphy.com/media/tnKFstAe0LU3u/giphy.gif',
+  'https://fansided.com/wp-content/blogs.dir/229/files/2014/02/6.gif',
+  'https://media.giphy.com/media/AZzm924YkjM0o/giphy.gif',
 ]
 
 const GiveUp = props => {
@@ -47,14 +64,12 @@ const GiveUp = props => {
       <FadeIn>
         <div className="alert alert-danger" data-test="component-give-up">
           <span data-test="give-up-message">
-            You
-            {diss}, the secret word was{' '}
+            {diss} The secret word was{' '}
             <b>
               <strong>
                 <em>{props.secretWord}</em>
               </strong>
             </b>
-            .
           </span>
           <br />
           <button
