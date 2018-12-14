@@ -18,6 +18,7 @@ const GuessedWords = props => {
       <FadeIn>
         <div
           style={{
+            marginBottom: '2em',
             backgroundColor: 'white',
             borderRadius: '1em',
             padding: '1em',
