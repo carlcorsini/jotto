@@ -44,17 +44,18 @@ export class UnconnectedInput extends Component {
               <div className="col">
                 <div className="btn-group">
                   <button
+                    type="button"
+                    onClick={this.giveUp}
+                    data-test="give-up-button"
+                    className="btn btn-danger mb-2">
+                    Give Up :(
+                  </button>
+                  <button
                     onClick={this.submitGuessedWord}
                     data-test="submit-button"
                     className="btn btn-primary mb-2 btn-block"
                     type="submit">
                     Submit
-                  </button>
-                  <button
-                    onClick={this.giveUp}
-                    data-test="give-up-button"
-                    className="btn btn-danger mb-2">
-                    Give Up :(
                   </button>
                 </div>
               </div>
